@@ -1,54 +1,58 @@
 <script>
+  // reference to external library that plays tunes
   import Tone from 'tone'
 
+  // store for clicked tune
+  import { clickedTune } from '../stores/tune.store.ts'
+
+  // external library object to play tunes
   const synth = new Tone.Synth().toMaster()
 
+  // action to play tune and update store value for tune
   const play = button => {
-    synth.triggerAttackRelease(button.prefix, button.length)
+    // update store value to clicked tune
+    clickedTune.set(button.prefix)
+
+    // call external library to play selected tune
+    synth.triggerAttackRelease(button.prefix, 0.5)
   }
 
+  // list of all tunes
   const buttons = [
     {
       prefix: 'C4',
       en: 'C',
       ru: 'До',
-      duration: '64n',
     },
     {
       prefix: 'D4',
       en: 'D',
       ru: 'Ре',
-      duration: '64n',
     },
     {
       prefix: 'E4',
       en: 'E',
       ru: 'Ми',
-      duration: '64n',
     },
     {
       prefix: 'F4',
       en: 'F',
       ru: 'Фа',
-      duration: '64n',
     },
     {
       prefix: 'G4',
       en: 'G',
       ru: 'Соль',
-      duration: '64n',
     },
     {
       prefix: 'A4',
       en: 'A',
       ru: 'Ля',
-      duration: '64n',
     },
     {
       prefix: 'B4',
       en: 'B',
       ru: 'Си',
-      duration: '64n',
     },
   ]
 </script>
@@ -58,7 +62,7 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    height: 100%;
+    height: 50%;
     align-items: flex-end;
   }
 
