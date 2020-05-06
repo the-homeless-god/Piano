@@ -53,6 +53,29 @@
   ]
 </script>
 
-{#each buttons as button}
-  <button on:click={() => play(button)}>{button.en}</button>
-{/each}
+<style>
+  .piano__button-list {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    align-items: flex-end;
+  }
+
+  .piano__button {
+    width: 15%;
+    height: 45%;
+    padding: 20px;
+    margin: 0.5px;
+    border-radius: 4px;
+    color: white;
+    font-size: 21px;
+    background-color: lightcoral;
+  }
+</style>
+
+<div class="piano__button-list">
+  {#each buttons as button}
+    <button class="piano__button" on:click={() => play(button)}>{button.en}</button>
+  {/each}
+</div>
