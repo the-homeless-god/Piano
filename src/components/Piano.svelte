@@ -17,42 +17,56 @@
     synth.triggerAttackRelease(button.prefix, 0.5)
   }
 
+  const playKey = event => {
+    const button = buttons.find(button => button.key === event.key)
+    if (button) {
+      play(button)
+    }
+  }
+
   // list of all tunes
   const buttons = [
     {
       prefix: 'C4',
       en: 'C',
       ru: 'До',
+      key: '1',
     },
     {
       prefix: 'D4',
       en: 'D',
       ru: 'Ре',
+      key: '2',
     },
     {
       prefix: 'E4',
       en: 'E',
       ru: 'Ми',
+      key: '3',
     },
     {
       prefix: 'F4',
       en: 'F',
       ru: 'Фа',
+      key: '4',
     },
     {
       prefix: 'G4',
       en: 'G',
       ru: 'Соль',
+      key: '5',
     },
     {
       prefix: 'A4',
       en: 'A',
       ru: 'Ля',
+      key: '6',
     },
     {
       prefix: 'B4',
       en: 'B',
       ru: 'Си',
+      key: '7',
     },
   ]
 </script>
@@ -77,6 +91,8 @@
     background-color: lightcoral;
   }
 </style>
+
+<svelte:body on:keydown={playKey} />
 
 <div class="piano__button-list">
   {#each buttons as button}
