@@ -1,3 +1,3 @@
 # Piano
 
-[Piano demo]('/public/index.html')
+[Piano demo](/public/index.html)
