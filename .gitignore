@@ -1,4 +1,4 @@
 node_modules
-public/bundle.*
+public/bundle.*.map
 package-lock.json
 .rpt2_cache

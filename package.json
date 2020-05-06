@@ -1,5 +1,5 @@
 {
-  "name": "svelte-widget",
+  "name": "piano",
   "version": "0.0.1",
   "devDependencies": {
     "@pyoner/svelte-ts-preprocess": "^1.2.1",
@@ -30,6 +30,7 @@
   "dependencies": {
     "prettier": "^1.19.1",
     "svelte-spinner": "^2.0.2",
+    "tone": "^13.8.25",
     "tslint": "^6.1.0",
     "tslint-config-prettier": "^1.18.0"
   }
