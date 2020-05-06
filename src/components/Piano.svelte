@@ -17,8 +17,11 @@
     synth.triggerAttackRelease(button.prefix, 0.5)
   }
 
+  // handler for user keys to play button by clicked key
   const playKey = event => {
+    // find button with user key
     const button = buttons.find(button => button.key === event.key)
+    // play button when exist
     if (button) {
       play(button)
     }
