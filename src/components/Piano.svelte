@@ -93,12 +93,21 @@
     font-size: 21px;
     background-color: lightcoral;
   }
+
+  .shine {
+    background-color: lightsalmon;
+    transition-delay: 50ms;
+    width: 16%;
+    height: 50%;
+  }
 </style>
 
 <svelte:body on:keydown={playKey} />
 
 <div class="piano__button-list">
   {#each buttons as button}
-    <button class="piano__button" on:click={() => play(button)}>{button.en}</button>
+    <button class:shine={button.prefix === $clickedTune} class="piano__button" on:click={() => play(button)}>
+      {button.en}
+    </button>
   {/each}
 </div>
