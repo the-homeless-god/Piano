@@ -45,7 +45,7 @@
   }
 
   .piano__octave {
-    display: contents;
+    display: flex;
     width: 100%;
   }
 
@@ -58,6 +58,7 @@
     border-radius: 4px;
     font-size: 21px;
     outline: none;
+    z-index: 1;
   }
 
   .black {
@@ -69,12 +70,13 @@
     padding: 20px;
     margin-left: 2px;
     margin-right: -45px;
+    z-index: 100;
   }
 
-  .shine {
-    background-color: lightsalmon;
+  .piano__button.highlight {
     transition-delay: 50ms;
-    color: white;
+    z-index: 10;
+    box-shadow: 0 35px 35px #40310a;
   }
 </style>
 
@@ -86,7 +88,7 @@
       {#each octave.buttons as button}
         <button
           class:black={button.color === ButtonColorEnum.black}
-          class:shine={button.name === $clickedTune}
+          class:highlight={button.name === $clickedTune}
           class="piano__button"
           on:click={() => play(button)} />
       {/each}
