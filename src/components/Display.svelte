@@ -1,6 +1,8 @@
 <script>
   // store for clicked tune
   import { clickedTune } from '../stores/tune.store.ts'
+
+  import Player from './Player.svelte'
 </script>
 
 <style>
@@ -20,5 +22,6 @@
 </style>
 
 <div class="display">
+  <Player />
   <span class="display__current-tune">{$clickedTune}</span>
 </div>

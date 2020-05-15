@@ -15,10 +15,14 @@
   const play = button => {
     // update store value to clicked tune
     clickedTune.set(button.name)
-
-    // call external library to play selected tune
-    synth.triggerAttackRelease(button.name, 0.5)
   }
+
+  clickedTune.subscribe(tune => {
+    if (tune !== '') {
+      // call external library to play selected tune
+      synth.triggerAttackRelease(tune, 0.5)
+    }
+  })
 
   // // handler for user keys to play button by clicked key
   // const playKey = event => {
