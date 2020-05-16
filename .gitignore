@@ -2,6 +2,3 @@ node_modules
 public/bundle.*.map
 package-lock.json
 .rpt2_cache
-public/assets/css/animation.css
-public/assets/css/fontello*.css
-public/assets/font/*
