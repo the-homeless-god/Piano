@@ -72,6 +72,13 @@
       fillEmpty()
     }
   }
+
+  const duplicate = () => {
+    $playerConfiguration.count += $playerConfiguration.count
+    $playerConfiguration.tunes.map(tune => {
+      $playerConfiguration.tunes.push({ enabled: false, value: tune.value })
+    })
+  }
 </script>
 
 <style>
@@ -117,9 +124,13 @@
   <input on:change={fillEmptyByAction} value={$playerConfiguration.count} />
   <span class="icon-plus" on:click={add} />
   <span class="icon-minus" on:click={remove} />
+  <span class="icon-cw" on:click={duplicate} />
   <input bind:value={$playerConfiguration.timeout} />
   <span class="icon-play" on:click={play} />
   <span class="icon-stop" on:click={stop} />
   <span class="icon-loop" on:click={loop} />
-  <span on:click={addClickedTune} class="current-tune">{$clickedTune}</span>
+
+  {#if $clickedTune !== ''}
+    <span on:click={addClickedTune} class="current-tune">{$clickedTune}</span>
+  {/if}
 </div>
