@@ -21,6 +21,7 @@
       }
 
       // play tune
+      clickedTune.set('')
       clickedTune.set($playerConfiguration.tunes[i].value)
 
       // add highlight to current tune
@@ -115,6 +116,7 @@
     align-items: center;
     justify-content: center;
     font-family: cursive;
+    height: 500px;
     cursor: pointer;
   }
 </style>
