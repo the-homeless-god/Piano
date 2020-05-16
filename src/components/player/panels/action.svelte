@@ -9,7 +9,16 @@
 
   const timeoutPromise = timeout => new Promise(resolve => setTimeout(resolve, timeout))
 
+  const resetHiglight = () => {
+    playerConfiguration.update(config => {
+      config.tunes.map(tune => (tune.enabled = false))
+      return config
+    })
+  }
+
   const play = async () => {
+    resetHiglight()
+
     for (let i = 0; i < $playerConfiguration.count; i++) {
       // drop highlight from previous tune
       if (i !== 0) {
