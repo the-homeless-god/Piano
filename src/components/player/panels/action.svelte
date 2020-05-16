@@ -72,6 +72,11 @@
     })
   }
 
+  const reset = () => {
+    $playerConfiguration.count = 0
+    $playerConfiguration.tunes = []
+  }
+
   const fillEmptyByAction = event => {
     $playerConfiguration.count = parseInt(event.target.value)
     fillEmptyByCount()
@@ -94,7 +99,7 @@
 <style>
   .player__actions > * {
     border: none;
-    width: 70px;
+    width: 60px;
     font-family: cursive;
     padding: 5px;
     font-size: 25px;
@@ -135,6 +140,7 @@
   <span class="icon-plus" on:click={add} />
   <span class="icon-minus" on:click={remove} />
   <span class="icon-cw" on:click={duplicate} />
+  <span class="icon-cancel" on:click={reset} />
   <input bind:value={$playerConfiguration.timeout} />
   <span class="icon-play" on:click={play} />
   <span class="icon-stop" on:click={stop} />
