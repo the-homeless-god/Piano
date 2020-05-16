@@ -84,11 +84,10 @@
 <style>
   .player__actions > * {
     border: none;
-    width: 80px;
+    width: 70px;
     font-family: cursive;
     padding: 5px;
     font-size: 25px;
-
     text-align: center;
   }
   .player__actions {
