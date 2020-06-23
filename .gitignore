@@ -1,4 +1,3 @@
 node_modules
 public/bundle.*.map
-package-lock.json
 .rpt2_cache
