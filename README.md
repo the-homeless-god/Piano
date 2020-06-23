@@ -1,4 +1,4 @@
-# Piano
+# Piano (beta)
 
 [Piano demo](/public/index.html)
 
