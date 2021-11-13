@@ -11,5 +11,13 @@
       "statements": 90
     }
   },
-  "coverageReporters": ["text"]
+  "moduleNameMapper": {
+    "\\.(css|less|scss|sss|styl)$": "<rootDir>/node_modules/jest-css-modules"
+  },
+  "testEnvironment": "jsdom",
+  "coverageReporters": ["text"],
+  "transform": {
+    "^.+\\.(ts|tsx|js|jsx)$": "ts-jest"
+  },
+  "setupFilesAfterEnv": ["<rootDir>/src/setupTests.ts"]
 }

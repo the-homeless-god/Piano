@@ -11,7 +11,7 @@ export const getKeyboardKeyHandler = () => {
     white: [']', '[', 'p', 'o', 'i', 'u', 'y', 't', 'r', 'e', 'w', 'q']
   }
 
-  return (button: Button) => {
+  return (button: Button): string => {
     if (isDarkButton(button)) {
       return keys.black.pop()
     }

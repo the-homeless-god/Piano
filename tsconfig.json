@@ -7,12 +7,12 @@
     "allowSyntheticDefaultImports": true,
     "jsx": "react",
     "allowJs": true,
-    "baseUrl": "src",
+    "baseUrl": "./",
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "downlevelIteration": true,
     "paths": {
-      "*": ["src/*"]
+      "*": ["./*"]
     },
     "lib": ["esnext", "dom", "dom.iterable"],
     "sourceMap": true,

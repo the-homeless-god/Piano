@@ -10,6 +10,7 @@ const webpackConfig = (): Configuration => ({
 
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.scss', '.svg'],
+    modules: [path.resolve(__dirname, '.'), 'node_modules'],
     plugins: [new TsconfigPathsPlugin({ configFile: './tsconfig.json' })]
   },
   output: {
