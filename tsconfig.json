@@ -1,13 +1,23 @@
 {
-  "include": ["src/**/*"],
-  "exclude": ["node_modules/*"],
   "compilerOptions": {
-    "target": "ESNEXT",
-    "module": "ESNEXT",
-    "strict": false,
+    "module": "commonjs",
     "moduleResolution": "node",
-    "types": ["@pyoner/svelte-types"],
+    "target": "ESNext",
+    "removeComments": true,
     "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true
-  }
+    "jsx": "react",
+    "allowJs": true,
+    "baseUrl": "src",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "downlevelIteration": true,
+    "paths": {
+      "*": ["src/*"]
+    },
+    "lib": ["esnext", "dom", "dom.iterable"],
+    "sourceMap": true,
+    "noImplicitAny": false
+  },
+  "exclude": ["node_modules", "build"],
+  "include": ["./src", "webpack.config.ts"]
 }

@@ -1,39 +1,74 @@
 {
-  "name": "piano",
-  "version": "0.0.5",
-  "devDependencies": {
-    "@pyoner/svelte-ts-preprocess": "^1.2.1",
-    "@pyoner/svelte-types": "^3.4.4-2",
-    "fontello-cli": "^0.5.0",
-    "npm-check-updates": "^4.0.4",
-    "npm-run-all": "^4.1.5",
-    "rollup": "^2.1.0",
-    "rollup-plugin-commonjs": "^10.1.0",
-    "rollup-plugin-livereload": "^1.0.4",
-    "rollup-plugin-node-resolve": "^5.2.0",
-    "rollup-plugin-svelte": "^5.1.1",
-    "rollup-plugin-terser": "^5.3.0",
-    "rollup-plugin-typescript2": "^0.26.0",
-    "sirv-cli": "^0.4.5",
-    "svelte": "^3.20.1",
-    "typescript": "^3.8.3"
-  },
+  "name": "web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "build": "rollup -c",
-    "autobuild": "rollup -c -w",
-    "dev": "run-p start:dev autobuild",
-    "start": "sirv public",
-    "start:dev": "sirv public --dev",
-    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
-    "lint": "tslint -p tsconfig.json",
-    "upd-all": "npm outdated && ncu -u && npm update && npm install",
-    "fontello": "fontello-cli install --config ./fontello.config.json --css ./public/assets/css --font ./public/assets/font"
+    "start": "webpack-cli serve --mode=development --env development --open --hot",
+    "build": "webpack --mode=production --env production --progress",
+    "lint": "eslint src/**/*.{ts,tsx} --quiet --fix",
+    "prettier": "prettier --write ./src/**",
+    "test": "jest --config=jest.config.json"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zimtir/Piano.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Zimtir/Piano/issues"
+  },
+  "homepage": "https://github.com/Zimtir/Piano#readme",
   "dependencies": {
-    "prettier": "^1.19.1",
-    "svelte-spinner": "^2.0.2",
-    "tone": "^13.8.25",
-    "tslint": "^6.1.0",
-    "tslint-config-prettier": "^1.18.0"
-  }
+    "@testing-library/jest-dom": "^5.15.0",
+    "@testing-library/react": "^12.1.2",
+    "classnames": "^2.3.1",
+    "fork-ts-checker-webpack-plugin": "^6.4.0",
+    "html-webpack-plugin": "^5.5.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "tone": "^14.7.77",
+    "tsconfig-paths-webpack-plugin": "^3.5.1",
+    "web-vitals": "^2.1.2",
+    "webpack": "^5.62.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/eslint-parser": "^7.16.3",
+    "@babel/preset-react": "^7.16.0",
+    "@babel/preset-typescript": "^7.16.0",
+    "@svgr/webpack": "^5.5.0",
+    "@types/node": "^16.11.6",
+    "@types/react": "^17.0.34",
+    "@types/react-dom": "^17.0.11",
+    "@types/webpack": "^5.28.0",
+    "@types/webpack-dev-server": "^4.3.1",
+    "@typescript-eslint/eslint-plugin": "^5.3.0",
+    "@typescript-eslint/parser": "^5.3.0",
+    "css-loader": "^6.5.1",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.26.1",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "jest": "^27.3.1",
+    "node-sass": "^6.0.1",
+    "prettier": "^2.4.1",
+    "sass-loader": "^12.3.0",
+    "style-loader": "^3.3.1",
+    "ts-loader": "^9.2.6",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.4.4",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.4.0"
+  },
+  "moduleDirectories": [
+    "node_modules",
+    "src"
+  ]
 }
