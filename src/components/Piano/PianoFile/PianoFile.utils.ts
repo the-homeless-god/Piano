@@ -1,4 +1,4 @@
-import { Tune } from '../../../services/OctaveService'
+import { Tune } from 'src/services/OctaveService'
 
 export const parseXmlTunes = (xml: Document): Tune[] =>
   Array.from(xml.querySelectorAll('note').entries()).map(item => {

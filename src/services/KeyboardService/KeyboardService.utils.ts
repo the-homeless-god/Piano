@@ -1,5 +1,5 @@
-import { ButtonColors } from '../../components/Piano'
-import { Button } from '../OctaveService/OctaveService.types'
+import { ButtonColors } from 'src/components/Piano'
+import { Button } from 'src/services/OctaveService'
 
 export const isDarkButton = (button: Button): boolean => {
   return button.color === ButtonColors.Dark

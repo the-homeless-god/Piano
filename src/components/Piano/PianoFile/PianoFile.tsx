@@ -1,7 +1,8 @@
 import React, { useCallback, useEffect, useState } from 'react'
 import * as Tone from 'tone'
-import { Tune } from '../../../services/OctaveService'
-import { AutoQueue, createTask } from '../../../services/TaskService'
+import { Tune } from 'src/services/OctaveService'
+import { AutoQueue, createTask } from 'src/services/TaskService'
+
 import { parseXmlTunes } from './PianoFile.utils'
 
 export type PianoFileProps = {}

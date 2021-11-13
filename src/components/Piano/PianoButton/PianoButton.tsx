@@ -1,7 +1,9 @@
 import React, { useCallback, useState } from 'react'
 import cx from 'classnames'
-import { Button } from '../../../services/OctaveService'
-import { isDarkButton } from '../../../services/KeyboardService'
+
+import { Button } from 'src/services/OctaveService'
+import { isDarkButton } from 'src/services/KeyboardService'
+
 import css from './PianoButton.module.scss'
 
 export type PianoButtonProps = {

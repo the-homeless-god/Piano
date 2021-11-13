@@ -1,9 +1,11 @@
 import React from 'react'
 import * as Tone from 'tone'
-import { Display } from '../Display'
+
+import { Display } from 'src/components/Display'
+import OctaveService from 'src/services/OctaveService'
+import { getKeyboardKeyHandler } from 'src/services/KeyboardService'
+
 import { PianoButton } from './PianoButton'
-import OctaveService from '../../services/OctaveService'
-import { getKeyboardKeyHandler } from '../../services/KeyboardService'
 import css from './Piano.module.scss'
 
 export const Piano = () => {

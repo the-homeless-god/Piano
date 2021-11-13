@@ -1,4 +1,4 @@
-import { ButtonColors, Tunes } from '../../components/Piano'
+import { ButtonColors, Tunes } from 'src/components/Piano'
 import { Button, Octave, OctaveConfig } from './OctaveService.types'
 
 export default class OctaveService {

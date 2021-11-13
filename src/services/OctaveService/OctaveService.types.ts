@@ -1,4 +1,4 @@
-import { ButtonColors, Tunes } from '../../components/Piano'
+import { ButtonColors, Tunes } from 'src/components/Piano'
 
 export type Button = {
   name: string

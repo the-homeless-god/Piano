@@ -1,5 +1,5 @@
 import React from 'react'
-import { PianoFile } from '../Piano'
+import { PianoFile } from 'src/components/Piano'
 import css from './Display.module.scss'
 
 export type DisplayProps = {}
