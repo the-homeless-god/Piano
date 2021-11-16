@@ -1,0 +1,13 @@
+.octaves {
+  display: flex;
+  width: 100%;
+  overflow-x: scroll;
+  position: fixed;
+  justify-content: center;
+  bottom: 0;
+  left: 0;
+}
+
+.octave {
+  display: flex;
+}

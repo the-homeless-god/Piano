@@ -1,0 +1,23 @@
+{
+  "roots": ["<rootDir>"],
+  "modulePaths": ["<rootDir>"],
+  "moduleDirectories": ["node_modules", "src"],
+  "collectCoverageFrom": ["src/**/*.{js,jsx,ts,tsx}", "!<rootDir>/node_modules/", "!<rootDir>/path/to/dir/"],
+  "coverageThreshold": {
+    "global": {
+      "branches": 90,
+      "functions": 90,
+      "lines": 90,
+      "statements": 90
+    }
+  },
+  "moduleNameMapper": {
+    "\\.(css|less|scss|sss|styl)$": "<rootDir>/node_modules/jest-css-modules"
+  },
+  "testEnvironment": "jsdom",
+  "coverageReporters": ["text"],
+  "transform": {
+    "^.+\\.(ts|tsx|js|jsx)$": "ts-jest"
+  },
+  "setupFilesAfterEnv": ["<rootDir>/src/setupTests.ts"]
+}
