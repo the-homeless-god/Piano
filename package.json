@@ -2,7 +2,7 @@
   "name": "web",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.js",  
   "scripts": {
     "start": "webpack-cli serve --mode=development --env development --open --hot",
     "build": "webpack --mode=production --env production --progress",
@@ -12,15 +12,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Zimtir/Piano.git"
+    "url": "git+https://github.com/the-homeless-god/Piano.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Zimtir/Piano/issues"
+    "url": "https://github.com/the-homeless-god/Piano/issues"
   },
-  "homepage": "https://github.com/Zimtir/Piano#readme",
+  "homepage": "./",
   "dependencies": {
     "@testing-library/jest-dom": "^5.15.0",
     "@testing-library/react": "^12.1.2",
